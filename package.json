@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sgcruiser/"
+    "url": "git+https://github.com/sgcruiser/goit-js-hw-13-image-finder.git"
   },
   "keywords": [],
   "author": "Glazyrin Sergey <glazyrinsb@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sgcruiser/"
+    "url": "https://github.com/sgcruiser/goit-js-hw-13-image-finder.git"
   },
-  "homepage": "https://github.com/sgcruiser/",
+  "homepage": "https://sgcruiser.github.io/goit-js-hw-13-image-finder/",
   "devDependencies": {
     "@babel/core": "^7.11.6",
     "@babel/plugin-proposal-class-properties": "^7.10.4",
