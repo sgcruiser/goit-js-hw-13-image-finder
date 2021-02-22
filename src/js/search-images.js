@@ -17,13 +17,16 @@ const verifyQueryResult = ({ hits, total }) => {
   }
   const markup = photoCard(hits);
 
-  return renderQuery(argument, markup, total);
+  renderQuery(argument, markup, total);
+  refs.inputQuery.elements.query.value = '';
+  return;
 };
 
 const makesImagesSearch = async event => {
   event.preventDefault();
   refs.gallery.innerHTML = '';
-  imagesSearch = event.target.value;
+  imagesSearch = event.currentTarget.elements.query.value;
+
   apiService.resetPage();
   refs.loadMoreButton.classList.add('is-hidden');
 
@@ -33,7 +36,7 @@ const makesImagesSearch = async event => {
   }
 };
 
-refs.inputQuery.addEventListener('input', debounce(makesImagesSearch, 750));
+refs.inputQuery.addEventListener('submit', makesImagesSearch);
 
 refs.loadMoreButton.addEventListener('click', () => {
   apiService.fetchImages(imagesSearch).then(verifyQueryResult);
